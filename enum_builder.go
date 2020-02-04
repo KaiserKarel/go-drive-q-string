@@ -18,7 +18,7 @@ func (b *EnumBuilder) EQ(variant string) *Builder {
 	b.builder.WriteString("'")
 	b.builder.WriteString(escape(variant))
 	b.builder.WriteString("'")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }
 
 func (b *EnumBuilder) NE(variant string) *Builder {
@@ -26,5 +26,5 @@ func (b *EnumBuilder) NE(variant string) *Builder {
 	b.builder.WriteString("'")
 	b.builder.WriteString(escape(variant))
 	b.builder.WriteString("'")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }

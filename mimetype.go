@@ -41,5 +41,5 @@ func (b *MimeTypeBuilder) Contains(param MIMEType) *Builder {
 	b.builder.builder.WriteString(" contains '")
 	b.builder.builder.WriteString(string(param))
 	b.builder.builder.WriteString("'")
-	return &Builder{builder:b.builder.builder}
+	return &Builder{builder: b.builder.builder}
 }

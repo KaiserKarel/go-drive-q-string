@@ -75,7 +75,7 @@ func SharedWithMe() *Builder {
 // within a folder. Note that for immutable items such as the top level folders of
 // shared drives, My Drive root folder, and Application Data folder the name is
 // constant.
-func Name() *StringBuilder  {
+func Name() *StringBuilder {
 	b := StringBuilder(*Q("name"))
 	return &b
 }
@@ -90,19 +90,19 @@ func FullText() *FullTextBuilder {
 
 // ViewedByMe is used for queries by whether the file has been viewed by this
 // user.
-func ViewedByMe() *DateTimeBuilder  {
+func ViewedByMe() *DateTimeBuilder {
 	b := DateTimeBuilder(*Q("viewedByMe"))
 	return &b
 }
 
 // Properties are key value pairs, which can be set by all apps.
-func Properties() *MapBuilder  {
+func Properties() *MapBuilder {
 	b := MapBuilder(*Q("properties"))
 	return &b
 }
 
 // AppProperties are key value private to the requesting app.
-func AppProperties() *MapBuilder  {
+func AppProperties() *MapBuilder {
 	b := MapBuilder(*Q("properties"))
 	return &b
 }
@@ -162,17 +162,16 @@ func (b *Builder) Visibility() *VisibilityBuilder {
 	return &VisibilityBuilder{builder: &builder}
 }
 
-
 // SharedWithMe is used to query for files that are in the user's "Shared with me" collection.
 func (b *Builder) SharedWithMe() *BoolBuilder {
 	b.builder.WriteString(" sharedWithMe")
-	return &BoolBuilder{builder:b.builder}
+	return &BoolBuilder{builder: b.builder}
 }
 
 // In is used for query by inclusion within one of the predefined collections.
 func (b *Builder) In() *CollectionBuilder {
 	b.builder.WriteString(" in")
-	return &CollectionBuilder{builder:b.builder}
+	return &CollectionBuilder{builder: b.builder}
 }
 
 // Or is the logical disjunction operator
@@ -231,12 +230,12 @@ func (b *Builder) MimeType() *MimeTypeBuilder {
 
 func (b *Builder) Properties() *MapBuilder {
 	b.builder.WriteString("properties")
-	return &MapBuilder{builder:b.builder}
+	return &MapBuilder{builder: b.builder}
 }
 
-func (b *Builder) AppProperties() *MapBuilder  {
+func (b *Builder) AppProperties() *MapBuilder {
 	b.builder.WriteString("appProperties")
-	return &MapBuilder{builder:b.builder}
+	return &MapBuilder{builder: b.builder}
 }
 
 func (b *Builder) Trashed(ok bool) *Builder {
@@ -260,5 +259,3 @@ func (b *Builder) Starred(ok bool) *Builder {
 	}
 	return b
 }
-
-

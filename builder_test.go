@@ -71,8 +71,8 @@ func TestExamples(t *testing.T) {
 			ModifiedTime().GT(time.Unix(1338811200, 0).UTC()).And().Sub(MimeType().Contains("image/").Or().MimeType().Contains("video/")).String(),
 		},
 		{
-				ViewedByMe().EQ(time.Unix(1338811200, 0).UTC()).String(),
-				"viewedByMe = '2012-06-04T12:00:00'",
+			ViewedByMe().EQ(time.Unix(1338811200, 0).UTC()).String(),
+			"viewedByMe = '2012-06-04T12:00:00'",
 		},
 	}
 

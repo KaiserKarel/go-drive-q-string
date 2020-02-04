@@ -15,11 +15,11 @@ type CollectionBuilder struct {
 // Parents finalized the expression with the parents collection.
 func (b *CollectionBuilder) Parents() *Builder {
 	b.builder.WriteString(" parents")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }
 
 // Writers finalized the expression with the writers collection.
 func (b *CollectionBuilder) Writers() *Builder {
 	b.builder.WriteString(" writers")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }

@@ -16,7 +16,7 @@ func (b *StringBuilder) Equals(name string) *Builder {
 	b.builder.WriteString("'")
 	b.builder.WriteString(escape(name))
 	b.builder.WriteString("'")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }
 
 func (b *StringBuilder) NotEquals(name string) *Builder {
@@ -24,12 +24,12 @@ func (b *StringBuilder) NotEquals(name string) *Builder {
 	b.builder.WriteString("'")
 	b.builder.WriteString(escape(name))
 	b.builder.WriteString("'")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }
 
 func (b *StringBuilder) Contains(param string) *Builder {
 	b.builder.WriteString(" contains '")
 	b.builder.WriteString(escape(param))
 	b.builder.WriteString("'")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }

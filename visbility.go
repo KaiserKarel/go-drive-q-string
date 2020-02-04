@@ -3,11 +3,11 @@ package qstring
 type VisibilityLevel string
 
 const (
-	AnyoneCanFind VisibilityLevel = "anyoneCanFind"
+	AnyoneCanFind  VisibilityLevel = "anyoneCanFind"
 	AnyoneWithLink VisibilityLevel = "anyoneWithLink"
-	DomainCanFind VisibilityLevel = "domainCanFind"
+	DomainCanFind  VisibilityLevel = "domainCanFind"
 	DomainWithLink VisibilityLevel = "domainWithLink"
-	Limited VisibilityLevel = "limited"
+	Limited        VisibilityLevel = "limited"
 )
 
 // VisibilityBuilders are used to match the visibility enum field.

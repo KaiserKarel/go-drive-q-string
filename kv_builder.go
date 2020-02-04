@@ -11,12 +11,12 @@ type MapBuilder struct {
 	builder *strings.Builder
 }
 
-func (kv *MapBuilder) Has(key, value string) *StringBuilder  {
+func (kv *MapBuilder) Has(key, value string) *StringBuilder {
 	kv.builder.WriteString("has {key='")
 	kv.builder.WriteString(escape(key))
 	kv.builder.WriteString("'")
 	kv.builder.WriteString("' and value='")
 	kv.builder.WriteString(escape(value))
 	kv.builder.WriteString("' }")
-	return &StringBuilder{builder:kv.builder}
+	return &StringBuilder{builder: kv.builder}
 }

@@ -19,5 +19,5 @@ func (b *FullTextBuilder) Contains(param string) *Builder {
 	b.builder.WriteString(" contains '")
 	b.builder.WriteString(escape(param))
 	b.builder.WriteString("'")
-	return &Builder{builder:b.builder}
+	return &Builder{builder: b.builder}
 }
