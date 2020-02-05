@@ -74,6 +74,10 @@ func TestExamples(t *testing.T) {
 			ViewedByMe().EQ(time.Unix(1338811200, 0).UTC()).String(),
 			"viewedByMe = '2012-06-04T12:00:00'",
 		},
+		{
+				"properties has {key='customKeyA' and value='customKeyAValue2'}",
+				Properties().Has("customKeyA", "customKeyAValue2").String(),
+		},
 	}
 
 	for _, test := range tests {
